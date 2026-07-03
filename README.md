@@ -5,7 +5,7 @@
   <p><strong>Run unrestricted AI models entirely on your device.<br/>No cloud. No filters. No limits.</strong></p>
 
 
-  [Overview](#overview) · [Download](#download) · [Features](#features) · [Quick Start](#quick-start) · [Local API](#local-api-server) · [Roadmap](#roadmap)
+  [Overview](#overview) · [Download](#download) · [Features](#features) · [Quick Start](#quick-start) · [Local API](#local-api-server) · [Roadmap](#roadmap) · [Voice Chat](#voice-chat) · [AI Agents](#ai-agents)
 
 </div>
 
@@ -29,21 +29,21 @@ No API keys. No subscriptions. No content restrictions. Your conversations never
 
 ## Download
 
-### Android APK — Latest Release (v2.0.0)
+### Android APK — Latest Release (v2.1.0)
 
 | APK | Architecture | Best For | Size |
 |-----|-------------|----------|------|
-| [**app-arm64-v8a-release.apk**](https://github.com/techjarves/Uncensored-Local-AI-Multiplatform/releases/download/v2.0.0/app-arm64-v8a-release.apk) | ARM 64-bit | **Most phones (2018+)** | ~65 MB |
-| [**app-armeabi-v7a-release.apk**](https://github.com/techjarves/Uncensored-Local-AI-Multiplatform/releases/download/v2.0.0/app-armeabi-v7a-release.apk) | ARM 32-bit | Older/budget phones | ~18 MB |
+| [**app-arm64-v8a-release.apk**](https://github.com/techjarves/Uncensored-Local-AI-Multiplatform/releases/download/v2.1.0/app-arm64-v8a-release.apk) | ARM 64-bit | **Most phones (2018+)** | ~65 MB |
+| [**app-armeabi-v7a-release.apk**](https://github.com/techjarves/Uncensored-Local-AI-Multiplatform/releases/download/v2.1.0/app-armeabi-v7a-release.apk) | ARM 32-bit | Older/budget phones | ~18 MB |
 | [**app-x86_64-release.apk**](https://github.com/techjarves/Uncensored-Local-AI-Multiplatform/releases/download/v1.0.0/app-x86_64-release.apk) | x86 64-bit | Emulators / ChromeOS | ~58 MB |
 
-> **Not sure which to pick?** Download `arm64-v8a` — it works on virtually all modern Android phones.
+> **Not sure which to pick?** Download arm64-v8a — it works on virtually all modern Android phones.
 
 ### iOS IPA — Pre-Release
 
 | File | Note |
 |------|------|
-| [**ios_pre_release.zip**](https://github.com/user-attachments/files/26956389/ios_pre_release.zip) | **Important:** You must **extract** this `.zip` file after downloading to get the actual **`.ipa`** app file to install. |
+| [**ios_pre_release.zip**](https://github.com/user-attachments/files/26956389/ios_pre_release.zip) | **Important:** You must **extract** this .zip file after downloading to get the actual **.ipa** app file to install. |
 
 ---
 
@@ -59,6 +59,9 @@ No API keys. No subscriptions. No content restrictions. Your conversations never
 | **Model Library** | Download, import, and manage GGUF models directly in the app |
 | **Chat History** | Persistent conversation history stored locally via Hive |
 | **Live Metrics** | Real-time tokens/sec and loading progress tracking |
+| **Voice Interaction** | Speak to the AI and get spoken responses with speech-to-text and text-to-speech |
+| **AI Agent Mode** | Specialized AI personas (Researcher, Writer, Coder, Analyst) for different tasks |
+| **Web Search** | Search the web and get AI-processed results |
 
 ---
 
@@ -67,23 +70,23 @@ No API keys. No subscriptions. No content restrictions. Your conversations never
 ### Android
 
 1. Download the correct APK from the [Download](#-download) table above
-2. On your phone: **Settings → Install unknown apps** → allow your browser
+2. On your phone: Settings → Install unknown apps → allow your browser
 3. Tap the downloaded APK to install
-4. Open the app, go to **Models** tab, download a model, and start chatting
+4. Open the app, go to Models tab, download a model, and start chatting
 
 ### iOS
 
 **1. Sideloading via TrollStore (Recommended - No 7 day limit):**
 1. Download [**ios_pre_release.zip**](https://github.com/user-attachments/files/26956389/ios_pre_release.zip) to your device.
-2. Unzip/extract it using the built-in iOS **Files** app to get the **`.ipa`** file.
+2. Unzip/extract it using the built-in iOS **Files** app to get the **.ipa** file.
 3. Open TrollStore, tap the **+** in the top right, and choose **Install IPA File**.
-4. Select the extracted `.ipa` file and install.
+4. Select the extracted .ipa file and install.
 
 **2. Sideloading via AltStore / AltServer (Requires PC/Mac):**
 1. Ensure AltServer is running on your computer and AltStore is installed on your iPhone.
-2. Download [**ios_pre_release.zip**](https://github.com/user-attachments/files/26956389/ios_pre_release.zip) to your device and extract the **`.ipa`** file using the **Files** app.
+2. Download [**ios_pre_release.zip**](https://github.com/user-attachments/files/26956389/ios_pre_release.zip) to your device and extract the **.ipa** file using the **Files** app.
 3. Open AltStore on your device, go to **My Apps**, and tap the **+** at the top left.
-4. Select the `.ipa` file to install (your device must be on the same Wi-Fi or connected via cable to your AltServer computer).
+4. Select the .ipa file to install (your device must be on the same Wi-Fi or connected via cable to your AltServer computer).
 
 **3. Build from Source:**
 
@@ -155,6 +158,73 @@ curl -N http://127.0.0.1:4891/v1/chat/completions \
 
 ---
 
+## Voice Chat
+
+**New in v2.1.0!** You can now interact with the AI using your voice.
+
+### Features
+- **Voice Input**: Speak your questions instead of typing
+- **Voice Output**: Have the AI responses read aloud
+- **Adjustable Settings**: Control speech rate, volume, and pitch
+- **Real-time Recognition**: See your speech transcribed as you speak
+
+### How to Use
+1. Navigate to the **Voice Chat** tab
+2. Tap the microphone button to start speaking
+3. Your speech will be transcribed in real-time
+4. Tap the send button to submit your voice message
+5. Tap the speaker button to have responses read aloud
+
+### Requirements
+- Microphone permission (requested on first use)
+- Internet connection (for speech recognition on some platforms)
+
+---
+
+## AI Agents
+
+**New in v2.1.0!** Specialized AI personas for different use cases.
+
+### Available Agents
+
+| Agent | Description | Best For |
+|-------|-------------|----------|
+| **Researcher** | Deep analysis and research | Detailed reports, fact-finding |
+| **Writer** | Creative content generation | Stories, articles, essays |
+| **Coder** | Code generation and analysis | Programming help, debugging |
+| **Analyst** | Data analysis and problem-solving | Complex problems, data interpretation |
+
+### How to Use
+1. Navigate to the **Agent Mode** tab
+2. Select an agent from the list
+3. Start chatting — the AI will respond according to its specialized persona
+4. Customize agent parameters in the settings
+
+### Creating Custom Agents
+You can create your own custom agents with:
+- Custom names and descriptions
+- Unique system prompts
+- Specialized parameters
+
+---
+
+## Web Search
+
+**New in v2.1.0!** Search the web directly from the app.
+
+### Features
+- **Direct Search**: Query the web without leaving the app
+- **AI Processing**: Get AI-summarized search results
+- **Browser Integration**: Open results in your default browser
+
+### How to Use
+1. Use the search functionality in the app
+2. Enter your search query
+3. View results or have the AI analyze them
+4. Open interesting results in your browser
+
+---
+
 ## Roadmap
 
 | Feature | Status |
@@ -166,10 +236,13 @@ curl -N http://127.0.0.1:4891/v1/chat/completions \
 | Local OpenAI-compatible API server | **Launched** |
 | Custom model import (URL + file) | **Launched** |
 | Multi-platform support | **Launched** |
-| AI Agent Mode | In Progress |
-| Web search integration | Planned |
-| Voice interaction | Planned |
+| Voice interaction | **Launched** |
+| AI Agent Mode | **Launched** |
+| Web search integration | **Launched** |
 | Image/vision model support | Planned |
+| Video model support | Planned |
+| Plugin system | Planned |
+| Cloud sync (optional) | Planned |
 
 ---
 
@@ -182,6 +255,9 @@ All contributions are welcome — and we especially need help from the community
 | **Windows** | Testing, packaging, installer script |
 | **macOS** | Testing, App Store prep, notarization |
 | **Linux** | Testing on distros, AppImage build |
+| **Voice Features** | Testing speech recognition on different devices |
+| **AI Agents** | Creating new agent personas, improving prompts |
+| **Web Search** | Integrating with different search providers |
 | **General** | Bug reports, feature ideas, UI improvements |
 
 If you own a desktop device and can test the app — **please do!** Even a simple "works" or "crashes on X" issue report is incredibly valuable.
